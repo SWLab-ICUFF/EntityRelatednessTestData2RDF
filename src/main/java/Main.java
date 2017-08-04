@@ -25,7 +25,6 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.XSD;
 import org.apache.log4j.PropertyConfigurator;
-import org.openrdf.model.vocabulary.XMLSchema;
 import uff.ic.swlab.dataset_ertd.model.DB;
 import uff.ic.swlab.dataset_ertd.util.Config;
 import uff.ic.swlab.dataset_ertd.util.MovieClassMapping;
@@ -344,7 +343,7 @@ public abstract class Main {
         Integer counter = 0;
 
         DATASET.setNsPrefix("owl", OWL.NS);
-        DATASET.setNsPrefix(XMLSchema.PREFIX, XMLSchema.NAMESPACE);
+        DATASET.setNsPrefix("xsd", XSD.NS);
         DATASET.setNsPrefix(EREL.PREFIX, EREL.NS);
         DATASET.setNsPrefix("", conf.host().linkedDataNS());
 

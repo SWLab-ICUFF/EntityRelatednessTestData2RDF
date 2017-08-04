@@ -1,3 +1,4 @@
 /target/
 /data/v3/rdf/
 /logs/
+/conf/host.properties
