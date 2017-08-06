@@ -10,14 +10,14 @@
         <title>Entity Relatedness Test Data (v3)</title>
     </head>
     <body>
-        <div style="text-align:right">
-            <a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>dataset/EntityRelatednessTestData_v3?@Lookup@=&refresh=clean">
-                <img title="Browse with" src="/uriburnerlogo_small.png" style="vertical-align:middle; width:10%; height:auto"/>
-            </a>
-        </div>
-        <h1 style="text-align:center">Entity Relatedness Test Data (v3)</h1>
-        <br/><br/><br/>
         <div style="margin:auto; text-align:justify; width:70%; height:90%">
+            <div style="text-align:right">
+                <a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>dataset/EntityRelatednessTestData_v3?@Lookup@=&refresh=clean">
+                    <i>browse as linked data</i>
+                </a>
+            </div>
+            <h1 style="text-align:center">Entity Relatedness Test Data (v3)</h1>
+            <br/><br/><br/>
             <p>
                 &emsp;&emsp;The entity relatedness problem refers to the question of computing
                 the relationship paths that better describe the connectivity between a given entity
