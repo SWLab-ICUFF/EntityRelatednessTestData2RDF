@@ -9,6 +9,7 @@ public class Config {
     private SWLabHost host;
 
     private String rawDataRootDir;
+    private String htmlRootDir;
     private String rdfRootDir;
 
     private String fusekiDataset;
@@ -56,15 +57,16 @@ public class Config {
         }
 
         rawDataRootDir = "./data/v3/raw";
+        htmlRootDir = "./data/v3/html";
         rdfRootDir = "./data/v3/rdf";
 
         fusekiDataset = "EntityRelatednessTestData";
         datasetname = fusekiDataset + "_v3";
         ontologyname = fusekiDataset + "_v1";
 
-        localOntologyHomepageName = rdfRootDir + "/ontology/" + ontologyname + "/index.jsp";
+        localOntologyHomepageName = htmlRootDir + "/ontology/" + ontologyname + "/index.jsp";
         localOntologyname = rdfRootDir + "/ontology/" + ontologyname + ".rdf";
-        localDatasetHomepageName = rdfRootDir + "/dataset/" + datasetname + "/index.jsp";
+        localDatasetHomepageName = htmlRootDir + "/dataset/" + datasetname + "/index.jsp";
         localXMLDumpName = rdfRootDir + "/dataset/" + datasetname + ".rdf.gz";
         localTurtleDumpName = rdfRootDir + "/dataset/" + datasetname + ".ttl.gz";
         localJsonldDumpName = rdfRootDir + "/dataset/" + datasetname + ".json.gz";
