@@ -1,13 +1,13 @@
-package uff.ic.swlab.dataset_ertd.util;
+package uff.ic.swlab.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import uff.ic.swlab.dataset_ertd.util.MovieScores;
-import uff.ic.swlab.dataset_ertd.util.MusicScores;
-import uff.ic.swlab.dataset_ertd.util.Score;
+import uff.ic.swlab.util.MovieScores;
+import uff.ic.swlab.util.MusicScores;
+import uff.ic.swlab.util.Score;
 
 public class DuplicateEntityScores {
 

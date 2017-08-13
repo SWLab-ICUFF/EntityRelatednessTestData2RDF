@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import org.apache.commons.validator.routines.UrlValidator;
-import uff.ic.swlab.dataset_ertd.util.Config;
+import uff.ic.swlab.util.Config;
 import uff.ic.swlab.dataset_ertd.vocabulary.EREL;
 
 public class DB {
