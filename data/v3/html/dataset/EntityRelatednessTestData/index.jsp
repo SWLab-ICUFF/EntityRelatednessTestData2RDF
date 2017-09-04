@@ -1,4 +1,5 @@
 <%
+    String version = "v3";
     String domain = request.getRequestURL().toString().replaceAll(request.getRequestURI(),"/");
     String domain2 = domain.replaceAll("http://","http/");
 %>
@@ -7,16 +8,16 @@
     <head>
         <meta charset="UTF-8">
         <link href="swlab.css" rel="stylesheet" type="text/css"/>
-        <title>Entity Relatedness Test Data (v3)</title>
+        <title>Entity Relatedness Test Data</title>
     </head>
     <body>
         <div style="margin:auto; text-align:justify; width:70%; height:90%">
             <div style="text-align:right">
-                <a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>dataset/EntityRelatednessTestData_v3?@Lookup@=&refresh=clean">
+                <a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>dataset/EntityRelatednessTestData">
                     <i>browse as linked data</i>
                 </a>
             </div>
-            <h1 style="text-align:center">Entity Relatedness Test Data (v3)</h1>
+            <h1 style="text-align:center">Entity Relatedness Test Data</h1>
             <br/><br/><br/>
             <p>
                 &emsp;&emsp;The entity relatedness problem refers to the question of computing
@@ -29,7 +30,7 @@
                 property relevance scores for the entities and properties used in the paths.
             </p>
             <div style="text-align:right">
-                <a href="https://doi.org/10.6084/m9.figshare.5143945.v3">https://doi.org/10.6084/m9.figshare.5143945.v3</a>
+                <a href="https://doi.org/10.6084/m9.figshare.5143945">https://doi.org/10.6084/m9.figshare.5143945</a>
             </div>
             <br/><br/>
             <iframe style="border:0; width:100%; height:351px"  src="https://widgets.figshare.com/articles/5143945/embed?show_title=1">
@@ -43,12 +44,12 @@
              rdfs: http://www.w3.org/2000/01/rdf-schema#
              void: http://rdfs.org/ns/void#
              myvoid: <%=domain%>void.ttl#">
-            <div  about="<%=domain%>void.ttl#EntityRelatednessTestData_v3" typeof="http://rdfs.org/ns/void#Dataset">
-                <div property="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" content="Entity Relatedness Test Data (v3)">
+            <div  about="<%=domain%>void.ttl#EntityRelatednessTestData_<%=version%>" typeof="http://rdfs.org/ns/void#Dataset">
+                <div property="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" content="Entity Relatedness Test Data (<%=version%>)">
                 </div>
             </div>
             <div  about="#this" typeof="http://xmlns.com/foaf/0.1/Document">
-                <div rel="http://xmlns.com/foaf/0.1/topic" resource="<%=domain%>void.ttl#EntityRelatednessTestData_v3">
+                <div rel="http://xmlns.com/foaf/0.1/topic" resource="<%=domain%>void.ttl#EntityRelatednessTestData_<%=version%>">
                 </div>
             </div>
         </div>
