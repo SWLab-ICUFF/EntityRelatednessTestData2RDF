@@ -19,6 +19,7 @@ public class Config {
     private String ontologyname;
 
     private String localOntologyHomepageName;
+    private String localOntologyHomepageName2;
     private String localOntologyname;
     private String localDatasetHomepageName;
     private String localXMLDumpName;
@@ -30,11 +31,9 @@ public class Config {
     private static String password;
 
     private String remoteOntologyHomepageName;
+    private String remoteOntologyHomepageName2;
     private String remoteOntologyName;
     private String remoteDatasetHomepageName;
-    private String remoteXmlDumpName;
-    private String remoteTurtleDumpName;
-    private String remoteJsonldDumpName;
     private String remoteNtriplesDumpName;
 
     private String fusekiDataUrl;
@@ -62,8 +61,8 @@ public class Config {
         //htmlRootDir = "./data/" + datasetVersion + "/html";
         //rdfRootDir = "./data/" + datasetVersion + "/rdf";
         rawDataRootDir = "./data/raw";
-        htmlRootDir = "./data/html";
-        rdfRootDir = "./data/rdf";
+        htmlRootDir = "./data";
+        rdfRootDir = "./data";
 
         ontologyVersion = "v1";
         ontologyname = fusekiDataset + "_" + ontologyVersion;
@@ -73,20 +72,16 @@ public class Config {
         //datasetname = fusekiDataset + "_" + datasetVersion;
         datasetname = fusekiDataset;
 
-        localOntologyHomepageName = htmlRootDir + "/ontology/" + fusekiDataset + "/index.jsp";
+        localOntologyHomepageName = htmlRootDir + "/ontology/" + datasetname + "/index.jsp";
+        localOntologyHomepageName2 = htmlRootDir + "/ontology/" + ontologyname + "/index.jsp";
         localOntologyname = rdfRootDir + "/ontology/" + ontologyname + ".rdf";
         localDatasetHomepageName = htmlRootDir + "/dataset/" + fusekiDataset + "/index.jsp";
-        localXMLDumpName = rdfRootDir + "/dataset/" + datasetname + ".rdf.gz";
-        localTurtleDumpName = rdfRootDir + "/dataset/" + datasetname + ".ttl.gz";
-        localJsonldDumpName = rdfRootDir + "/dataset/" + datasetname + ".json.gz";
         localNtriplesDumpName = rdfRootDir + "/dataset/" + datasetname + ".nt.gz";
 
-        remoteOntologyHomepageName = "/tomcat/ontology/" + fusekiDataset + "/index.jsp";
+        remoteOntologyHomepageName = "/tomcat/ontology/" + datasetname + "/index.jsp";
+        remoteOntologyHomepageName2 = "/tomcat/ontology/" + ontologyname + "/index.jsp";
         remoteOntologyName = "/tomcat/ontology/" + ontologyname + ".rdf";
-        remoteDatasetHomepageName = "/tomcat/dataset/" + fusekiDataset + "/index.jsp";
-        remoteXmlDumpName = "/tomcat/dataset/" + datasetname + ".rdf.gz";
-        remoteTurtleDumpName = "/tomcat/dataset/" + datasetname + ".ttl.gz";
-        remoteJsonldDumpName = "/tomcat/dataset/" + datasetname + ".json.gz";
+        remoteDatasetHomepageName = "/tomcat/dataset/" + datasetname + "/index.jsp";
         remoteNtriplesDumpName = "/tomcat/dataset/" + datasetname + ".nt.gz";
 
         fusekiDataUrl = host.getDataURL(fusekiDataset);
@@ -166,18 +161,6 @@ public class Config {
 
     public String remoteDatasetHomepageName() {
         return remoteDatasetHomepageName;
-    }
-
-    public String remoteXmlDumpName() {
-        return remoteXmlDumpName;
-    }
-
-    public String remoteTurtleDumpName() {
-        return remoteTurtleDumpName;
-    }
-
-    public String remoteJsonldDumpName() {
-        return remoteJsonldDumpName;
     }
 
     public String remoteNtriplesDumpName() {

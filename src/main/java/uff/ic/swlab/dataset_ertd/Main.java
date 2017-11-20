@@ -1,3 +1,4 @@
+package uff.ic.swlab.dataset_ertd;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -486,11 +487,7 @@ public abstract class Main {
     private static void uploadDataset() throws FileNotFoundException, IOException, Exception {
         conf.host().mkDirsViaFTP(conf.remoteDatasetHomepageName(), conf.username(), conf.password());
         conf.host().uploadBinaryFile(conf.localDatasetHomepageName(), conf.remoteDatasetHomepageName(), conf.username(), conf.password());
-        conf.host().uploadBinaryFile(conf.localXMLDumpName(), conf.remoteXmlDumpName(), conf.username(), conf.password());
-        conf.host().uploadBinaryFile(conf.localTurtleDumpName(), conf.remoteTurtleDumpName(), conf.username(), conf.password());
-        conf.host().uploadBinaryFile(conf.localJsonldDumpName(), conf.remoteJsonldDumpName(), conf.username(), conf.password());
         conf.host().uploadBinaryFile(conf.localNtriplesDumpName(), conf.remoteNtriplesDumpName(), conf.username(), conf.password());
-
         conf.host().putModel(conf.fusekiDataset(), DATASET);
         conf.host().backupDataset(conf.fusekiDataset());
     }
