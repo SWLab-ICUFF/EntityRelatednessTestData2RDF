@@ -1,4 +1,4 @@
-package uff.ic.swlab.util;
+package uff.ic.swlab.dataset_ertd.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;

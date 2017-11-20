@@ -1,4 +1,4 @@
-package uff.ic.swlab.util;
+package uff.ic.swlab.dataset_ertd.util;
 
 public class Score {
 

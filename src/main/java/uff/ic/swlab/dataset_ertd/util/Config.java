@@ -1,4 +1,4 @@
-package uff.ic.swlab.util;
+package uff.ic.swlab.dataset_ertd.util;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -12,7 +12,7 @@ public class Config {
     private String htmlRootDir;
     private String rdfRootDir;
 
-    private String datasetVersion;
+    //private String datasetVersion;
     private String ontologyVersion;
     private String fusekiDataset;
     private String datasetname;
@@ -58,15 +58,20 @@ public class Config {
             host = new SWLabHost("localhost", 8080, 2121);
         }
 
-        rawDataRootDir = "./data/" + datasetVersion + "/raw";
-        htmlRootDir = "./data/" + datasetVersion + "/html";
-        rdfRootDir = "./data/" + datasetVersion + "/rdf";
+        //rawDataRootDir = "./data/" + datasetVersion + "/raw";
+        //htmlRootDir = "./data/" + datasetVersion + "/html";
+        //rdfRootDir = "./data/" + datasetVersion + "/rdf";
+        rawDataRootDir = "./data/raw";
+        htmlRootDir = "./data/html";
+        rdfRootDir = "./data/rdf";
 
-        datasetVersion = "v3";
         ontologyVersion = "v1";
-        fusekiDataset = "EntityRelatednessTestData";
-        datasetname = fusekiDataset + "_" + datasetVersion;
         ontologyname = fusekiDataset + "_" + ontologyVersion;
+
+        //datasetVersion = "v3";
+        fusekiDataset = "EntityRelatednessTestData";
+        //datasetname = fusekiDataset + "_" + datasetVersion;
+        datasetname = fusekiDataset;
 
         localOntologyHomepageName = htmlRootDir + "/ontology/" + fusekiDataset + "/index.jsp";
         localOntologyname = rdfRootDir + "/ontology/" + ontologyname + ".rdf";

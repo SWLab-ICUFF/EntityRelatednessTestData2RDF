@@ -1,4 +1,4 @@
-package uff.ic.swlab.util;
+package uff.ic.swlab.dataset_ertd.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,13 +10,13 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public final class MoviePropertyRelevanceScore extends HashMap<String, Double> {
+public final class MusicPropertyRelevanceScore extends HashMap<String, Double> {
 
     public static Config conf = Config.getInsatnce();
 
-    public MoviePropertyRelevanceScore() {
+    public MusicPropertyRelevanceScore() {
         String linha;
-        File f = new File(conf.rawDataRootDir() + "/movie_property_relevance_scores/properties.txt");
+        File f = new File(conf.rawDataRootDir() + "/music_property_relevance_scores/properties.txt");
         try (InputStream in = new FileInputStream(f);) {
             Scanner sc = new Scanner(in);
             int count = 0;
@@ -31,13 +31,13 @@ public final class MoviePropertyRelevanceScore extends HashMap<String, Double> {
                         cols[0] = cols[0].trim();
                         put(cols[0], Double.valueOf(cols[1]));
                     } else
-                        System.out.println(String.format("Error: class -> %1s, line -> %1s.", "MoviePropertyRelevanceScore", linha));
+                        System.out.println(String.format("Error: class -> %1s, line -> %1s.", "MusicPropertyRelevanceScore", linha));
                 }
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(MoviePropertyRelevanceScore.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MusicPropertyRelevanceScore.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(MoviePropertyRelevanceScore.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MusicPropertyRelevanceScore.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
