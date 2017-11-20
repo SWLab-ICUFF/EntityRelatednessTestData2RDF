@@ -47,7 +47,7 @@
              void: http://rdfs.org/ns/void#
              myvoid: <%=domain%>void.ttl#">
             <div  about="<%=domain%>void.ttl#EntityRelatednessTestData" typeof="http://rdfs.org/ns/void#Dataset">
-                <div property="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" content="Entity Relatedness Test Data (latest version)">
+                <div property="http://www.w3.org/1999/02/22-rdf-syntax-ns#label" content="Entity Relatedness Test Data">
                 </div>
             </div>
             <div  about="#this" typeof="http://xmlns.com/foaf/0.1/Document">
