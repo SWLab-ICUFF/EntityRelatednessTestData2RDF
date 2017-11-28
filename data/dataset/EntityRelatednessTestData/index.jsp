@@ -1,24 +1,17 @@
 <%
     String domain = request.getRequestURL().toString().replaceAll(request.getRequestURI(),"/");
     String domain2 = domain.replaceAll("http://","http/");
-	String version = "v3";
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <link href="swlab.css" rel="stylesheet" type="text/css"/>
-        <title>Entity Relatedness Test Data (latest version)</title>
+        <title>Entity Relatedness Test Data</title>
     </head>
     <body>
         <div style="margin:auto; text-align:justify; width:70%; height:90%">
-            <div style="text-align:right">
-                <a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>dataset/EntityRelatednessTestData/">
-                    <i>browse as linked data</i>
-                </a>
-            </div>
-            <h1 style="text-align:center">Entity Relatedness Test Data (latest version)</h1>
-            <br/><br/><br/>
+            <h1 style="text-align:center">Entity Relatedness Test Data</h1>            
             <p>
                 &emsp;&emsp;The entity relatedness problem refers to the question of computing
                 the relationship paths that better describe the connectivity between a given entity
@@ -30,12 +23,12 @@
                 property relevance scores for the entities and properties used in the paths.
             </p>
             <div style="text-align:right">
-				<a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>void.ttl%01EntityRelatednessTestData">void</a>,
 				<a href="http://swlab.ic.uff.br/fuseki/dataset.html?tab=query&ds=/EntityRelatednessTestData">sparql</a>, 
+				<a href="http://linkeddata.uriburner.com/about/html/<%=domain2%>void.ttl%01EntityRelatednessTestData">void</a>,
 				<a href="https://doi.org/10.6084/m9.figshare.5143945">doi</a>
             </div>
-            <br/><br/>
-            <iframe style="border:0; width:100%; height:351px"  src="https://widgets.figshare.com/articles/5143945/embed?show_title=1">
+            <br/>
+            <iframe src="https://widgets.figshare.com/articles/5143945/embed?show_title=1" width="100%" height="351" frameborder="0">
             </iframe>
         </div>
 
