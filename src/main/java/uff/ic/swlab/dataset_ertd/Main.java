@@ -488,7 +488,7 @@ public abstract class Main {
         conf.host().mkDirsViaFTP(conf.remoteDatasetHomepageName(), conf.username(), conf.password());
         conf.host().uploadBinaryFile(conf.localDatasetHomepageName(), conf.remoteDatasetHomepageName(), conf.username(), conf.password());
         conf.host().uploadBinaryFile(conf.localNtriplesDumpName(), conf.remoteNtriplesDumpName(), conf.username(), conf.password());
-        conf.host().putModel(conf.fusekiDataset(), DATASET);
+        conf.host().putModel(DATASET, conf.fusekiDataset());
         conf.host().backupDataset(conf.fusekiDataset());
     }
 
